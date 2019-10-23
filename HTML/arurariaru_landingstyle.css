@@ -43,19 +43,60 @@ header a{
 	color: #FAE89D;
 	text-decoration: none;
 	text-transform: uppercase;
-	font-size: 16px;
+	font-size: 14px;
 }
 
 /* Make horizontal menu */
 header li{
 	float: left;
 	display: inline;
-	padding: 0 20px 0 20px;
+	padding: 0 10px 0 10px;
 }
 
 header .highlight, header .current a{
 	color: #FAE89D;
 	font-weight: bold;
+}
+
+.tab-button{
+	background-color: none;
+	border: none;
+	color: #ffffff;
+	outline: none;
+	padding: 12px 40px 10px;
+	position: relative;
+}
+
+.tab-button:before,
+.tab-button:after{
+	border: 0 solid transparent;
+	transition: all 0.25s;
+	content: '';
+	height: 24px;
+	position: absolute;
+	width: 24px;
+}
+
+.tab-button:before{
+	border-top: 3px solid #C47135;
+	left: 0px;
+	top: -5px;
+}
+
+.tab-button:after{
+	border-bottom: 3px solid #C47135;
+	bottom: -5px;
+	right: 0px;
+}
+
+.tab-button:hover{
+	background-color: none;
+}
+
+.tab-button:hover:before,
+.tab-button:hover:after{
+	height: 100%;
+	width: 100%;
 }
 
 /* Showcase */
@@ -117,7 +158,7 @@ header .highlight, header .current a{
 }
 
 #boxes .box img{
-	width: 120px;
+	width: inherit;
 }
 
 #boxes .box h2{
