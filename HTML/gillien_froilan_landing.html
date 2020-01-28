@@ -4,11 +4,11 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="A website for CS projects">
 	<meta name="keywords" content="Gillien Froilan, CS">
 	<meta name="author" content="Gillien Froilan">
-	<title>Gillien Froilan | Welcome</title>
+	<title>Gillien Froilan Portfolio</title>
 	<link rel="stylesheet" id="bootstrap-css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 	<!--href="C:\Users\anfro\Documents\Portfolio\Webdev\HTML\gillien_froilan_landingstyle.css">-->
   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -24,11 +24,12 @@
 			width: 100px;
 			height: 100px;
 			padding: 10px 16px;
-			background-color: #ffff33;
-			border: 2px solid black;
+			background-color: rgb(255, 255, 102);
+			border: 2px solid white;
 			border-radius: 60px;
 			font-size: 20px;
 			text-align: center;
+			z-index: 2;
 			
 		}
 
@@ -43,19 +44,20 @@
 			overflow-x: hidden;
 			transition: 0.5s;
 			padding-top: 60px;
+			z-index: 3;
 		}
 
 		.sidenav a {
 			padding: 8px 8px 8px 32px;
 			text-decoration: none;
 			font-size: 25px;
-			color: #ffff33;
+			color: rgb(255, 255, 102);
 			display: block;
 			transition: 0.3s;
 		}
 
 		.sidenav a:hover {
-			color: #ffff33;
+			color: rgb(255, 255, 102);
 		}
 
 		.sidenav .closebtn {
@@ -90,6 +92,69 @@
 			transform-origin: bottom left;
 		}
 
+		.showcase {
+			height: 93vh;
+			width: 100%;
+			position: relative;
+			top: 0;
+			left: 0;
+			background: url("20190804_212615.jpg") no-repeat center center/cover;
+			border-bottom-width: 100px;
+			border-bottom-color: black ;
+		}
+
+		.showcase::after {
+			content:' ';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			z-index: 1;
+			background: rgba(0, 0, 0, 0.6);
+			box-shadow: inset 120px 100px 250px #000000, inset -120px, -100px, 250px #000000;
+		}
+
+		.showcase-content {
+			position: absolute;
+			z-index: 2;
+			width: 100%;
+			margin: auto;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+			margin-top: 9rem;
+		}
+
+		.showcase-content h1 {
+			font-weight: 700;
+			font-size: 5.2rem;
+			line-height: 1.1;
+			margin: 0 0 2rem;
+			color: white;
+		}
+
+		.showcase-content small {
+			text-transform: uppercase;
+			color: white;
+			font-weight: 400;
+			font-size: 1.9rem;
+			line-height: 1.25;
+			margin: 0 0 2rem;
+			color: white;
+		}
+
+		.row {
+			margin:15px;
+			background-position: center;
+		}
+
+		.description{
+			text-align: center;
+		}
+
 		@media screen and (max-height: 450px) {
 			.sidenav {padding-top: 15px;}
 			.sidenav a {font-size: 18px;}
@@ -111,6 +176,7 @@
 		<a href="#" class="hover-underline-animation">Android/Java</a>
 	</div>
 
+
 	<!--Circle menu button (Opens a vertical navbar)-->
 	<button type="button" class="btn-circle btn" onclick="openNav()">&#9776;Menu</button>
 
@@ -126,6 +192,67 @@
 	
 
 	<!--Showcase-->
+	<header class="showcase">
+		<div class="showcase-content">
+			<h1>Gillien Froilan <br><small>Expanding my knowledge <br>Step-by-step</small></h1>
+		</div>
+	</header>
+
+	<div class="container">
+		<div class="row">
+			<a href="#" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+				<img src="C:\Users\anfro\Documents\Portfolio\Webdev\HTML\20191024_1752531.jpg" class="img-fluid rounded">
+			</a>
+			<a href="#" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+				<img src="C:\Users\anfro\Documents\Portfolio\Webdev\HTML\20190201_1339111.jpg" class="img-fluid rounded">
+			</a>
+			<a href="#" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+				<img src="C:\Users\anfro\Documents\Portfolio\Webdev\HTML\20190919_1652391.jpg" class="img-fluid rounded">
+			</a>
+		</div>
+		<p class="description">Currently majoring in Computing Science with a minor in East Asia Studies in the University of Alberta</p>
+		<div class="row">
+			<a href="#" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+				<img src="C:\Users\anfro\Documents\Portfolio\Webdev\HTML\20190823_1355391.jpg" class="img-fluid rounded">
+			</a>
+			<a href="#" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+				<img src="C:\Users\anfro\Documents\Portfolio\Webdev\HTML\20190822_1801471.jpg" class="img-fluid rounded">
+			</a>
+			<a href="#" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+				<img src="C:\Users\anfro\Documents\Portfolio\Webdev\HTML\20190507_0221492.jpg" class="img-fluid rounded">
+			</a>
+		</div>
+		<p class="description">I enjoy reading, cooking, drawing, and making arduino projects in my past time</p>
+		<div class="row">
+			<a href="#" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+				<img src="C:\Users\anfro\Documents\Portfolio\Webdev\HTML\20190802_111158.jpg" class="img-fluid rounded">
+			</a>
+			<a href="#" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+				<img src="C:\Users\anfro\Documents\Portfolio\Webdev\HTML\20190802_111722.jpg" class="img-fluid rounded">
+			</a>
+		</div>
+		<p class="description">An achievement that I'm currently most proud of is placing second in the National Japanese Speech Competition</p>
+		<div class="row">
+			<a href="#" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+				<img src="C:\Users\anfro\Documents\Portfolio\Webdev\HTML\20190802_111158.jpg" class="img-fluid rounded">
+			</a>
+			<a href="#" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+				<img src="C:\Users\anfro\Documents\Portfolio\Webdev\HTML\20190802_111722.jpg" class="img-fluid rounded">
+			</a>
+		</div>
+		<p class="description">Right now my goal is to expand my knowledge in programming by gaining hands on experience in a work setting</p>
+		<div class="row">
+			<a href="#" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+				<img src="C:\Users\anfro\Documents\Portfolio\Webdev\HTML\20190802_111158.jpg" class="img-fluid rounded">
+			</a>
+			<a href="#" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+				<img src="C:\Users\anfro\Documents\Portfolio\Webdev\HTML\20190802_111722.jpg" class="img-fluid rounded">
+			</a>
+		</div>
+		<p class="description">Languages that I practice most often are python and java for Android projects. Besides that I have experience in HTML, CSS, bootstrap, SQL, and C</p>
+
+		
+	</div>
 
 	<!--About Me-->
 
